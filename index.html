@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8 - Part 1. Factorial Calculator</title>
+</head>
+<body>
+    <h1>Part 1. Factorial Calculator</h1>
+    <p>Enter a positive integer to calculate its factorial:</p>
+    <input type="number" id="inputNumber" min="1">
+    <button onclick="calculateFactorial()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateFactorial() {
+            const inputNumber = document.getElementById("inputNumber").value;
+            const resultElement = document.getElementById("result");
+
+            if (inputNumber < 1) {
+                resultElement.textContent = "Answer: Unspecified";
+            } else {
+                let factorial = 1;
+                for (let i = 1; i <= inputNumber; i++) {
+                    factorial *= i;
+                }
+                resultElement.textContent = "Answer: " + factorial;
+            }
+        }
+    </script>
+</body>
+</html>
